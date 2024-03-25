@@ -5,6 +5,7 @@ import Login from "../Pages/Login/Login";
 import AdminRegistration from "../Pages/Login/AdminRegistration";
 import Admin from "../Pages/Admin/Admin";
 import Youtube from "../Pages/Youtube/Youtube";
+import YoutubeVideo from "../Pages/Youtube/YoutubeVideo";
 import About from "../Pages/Youtube/About";
 import Tutor from "../Pages/Tutor/Tutor";
 import Student from "../Pages/Student/Student";
@@ -31,6 +32,7 @@ const Router = () => {
         <Route path="/contents" element={<Content />} />
         <Route path="/doubts" element={<Doubts />} />
         <Route path="/youtube" element={<Youtube />} />
+        <Route path="/youtubevideo/:id" element={<YoutubeVideo />} />
         <Route path="/about" element={<About />} />
         <Route path="/doubt/:id" element={<SingleDoubt />} />
         <Route path="*" element={<Home />} />
