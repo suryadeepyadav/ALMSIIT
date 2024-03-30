@@ -1,0 +1,74 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.p-15 {
+    padding: 15px;
+}
+
+.card {
+    background-color: #fcfffe;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    color: #073886;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.card-content {
+    color: #062659;
+    /* padding-left: 20px; */
+    margin-bottom: 10px;
+}
+.card-content1 {
+    color: #062659;
+    /* padding-left: 20px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-content p {
+    margin-bottom: 10px;
+}
+.course-group ul li {
+    margin-top: 2px;
+    list-style-type: disc;
+
+}
+.contact-info {
+    margin-top: 20px;
+}
+.programmingimage {
+    width: 350px; /* Adjust the width as needed */
+    float: top;
+}
+
+.image-list-container {
+    overflow: auto; /* Clear the float */
+}
+.imglang {
+    width: 350px; /* Adjust the width of the C Programming image */
+    margin-left: 10px; /* Add spacing between the C Programming image and the text */
+}
+.card-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    flex-basis: 30%;
+    margin-bottom: 20px; /* Adjust spacing between cards */
+}
+
+
+.card-content li {
+    list-style-type: disc; /* Use disc style bullet points */
+}
+
+
+
