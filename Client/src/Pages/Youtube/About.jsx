@@ -1,55 +1,80 @@
 import Navbar from "../../Components/Sidebar/Navbar";
-// import Header from "../../Components/Header/Header";
+import React from 'react';
+import './About.css'; // Assuming this CSS file is in the same directory as your component
+import webdesigning from './images/webdesigning.png.png'; // Importing the image for Web Designing
+import imglang from './images/imglang.png'; // Importing the image for C Programming
+import { Card } from "antd";
+
 const About = () => {
     return (
         <Navbar>
-                    {/* <Header Title={"About us"} Address={"About"} /> */}
-        <div className="container  p-15">
-            <div className="row" style={{paddingLeft:'5px'}}>
-                <div className="col-lg-10 offset-lg-2 rounded-lg">
-                    <div className="p-3 mb-4" style={{ backgroundColor: '#fcfffe', borderRadius: '10px' }}>
-                        <h2 className="text-center text-#062659" style={{ color: '#062659' }}> <b>About Us</b></h2>
-                        <p className="text-center text-#062659">Welcome to <b> SIIT</b>, your educational platform for computer courses. We are dedicated to providing high-quality education and empowering individuals with the skills they need to succeed in the digital world.</p>
-                    </div>
-                    <div className="p-3 mb-4 rounded-lg" style={{ backgroundColor: '#fcfffe', borderRadius: '10px' }}>
-                        <h3 className="text-center" style={{ color: '#062659' }}> <b>Our Courses</b></h3>
-                        <p>At <b>SIIT</b>, we offer a wide range of courses to cater to different learning needs. Whether you are a beginner or an experienced professional looking to enhance your skills, we have courses designed for you.</p>
-                        <ul className="bg-#062659 p-2" type="1">
-                            <li><b> Web Designing</b></li>
-                            <li> <b>C Programming</b></li>
-                            <li> <b>C++ Programming </b></li>
-                            <li> <b>Java Programming</b></li>
-                            <li> <b>Python</b></li>
-                            <li> <b> PHP Development</b></li>
-                            <li> <b>Html</b></li>
-                            <li> <b>CSS Styling</b></li>
-                            <li> <b>JavaScript Development</b></li>
-                            <li> <b>CCC Course</b></li>
-                            <li> <b>Tally ERP</b></li>
-                            {/* Add more courses as needed */}
-                        </ul>
-                    </div>
-                    <div className="p-3 mb-4 rounded-lg" style={{ backgroundColor: '#fcfffe', borderRadius: '10px' }}>
-                        <h3 style={{ color: '#062659' }}> <b>Our Mission</b></h3>
-                        <p>Our mission is to make quality education accessible to everyone. We strive to create a supportive and engaging learning environment that fosters creativity, critical thinking, and practical skills.</p>
-                    </div>
-                    <div className="p-3 mb-4 rounded-lg" style={{ backgroundColor: '#fcfffe', borderRadius: '10px' }}>
-                        <h3 style={{ color: '#062659' }}> <b>Our Team</b></h3>
-                        <p> <b>SIIT</b> is led by <b> Suryadeep Yadav,Ankit Yadav & shivam kashyap</b>, an experienced instructor with over 5 years of teaching experience in various computer courses. With a passion for education and a strong background in the field, <b>Suryadeep</b> is dedicated to providing high-quality learning experiences to students.</p>
-                    </div>
-                    <div className="p-3 rounded-lg" style={{ backgroundColor: '#fcfffe', borderRadius: '10px' }}>
-                        <h3 style={{ color: '#062659' }}> <b>Contact Us</b></h3>
-                        <p>If you have any questions or inquiries, please feel free to reach out to us. We are here to assist you in your learning journey.</p>
-                        <p> <b>Email: suryayadav1012002@gmail.com</b></p>
-                        <p> <b>Phone: 7084516342</b></p>
-                        <p> <b>Email: shivam.r.vatham@gmail.com</b></p>
-                        <p> <b>Phone: 9408954477</b></p>
-                        <p> <b>Email: ankityadav1022@gmail.com</b></p>
-                        <p> <b>Phone: 7844915732</b></p>
+            <div className="container p-15">
+                <div className="row">
+                    <div className="col-lg-10 offset-lg-1">
+                        <div className="card">
+                            <h2 className="card-title">About Us</h2>
+                            <p className="card-content">Welcome to <b>SIIT</b>, your educational platform for computer courses. We are dedicated to providing high-quality education and empowering individuals with the skills they need to succeed in the digital world.</p>
+                        </div>
+                        <div className="card-container">
+
+                            <Card className="card">
+                                <h3 className="card-title">Our Courses</h3>
+
+                                <img src={webdesigning} alt="Web Designing" className="programmingimage" />
+                                <div className="card-content1">
+                                    <div className="course-group">
+                                        <ul>
+                                            <li>
+                                                Web Designing
+                                            </li>
+                                            <li>CCC Course</li>
+                                            <li>Tally ERP</li>
+                                            <li>C Programming</li>
+                                            <li>HTML</li>
+                                            <li>CSS Styling</li>
+                                        </ul>
+                                    </div>
+                                    <div className="course-group">
+                                        <ul>
+                                            <li>PHP Development</li>
+                                            <li>Python</li>
+                                            <li>Javascript Development</li>
+                                            <li>C++ Programming</li>
+                                            <li>Java Programming</li>
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+                            </Card>
+
+                            <Card className="card">
+                                <h3 className="card-title">Speciality In</h3>
+                                <img src={imglang} alt="C Programming" className="imglang" />
+                            </Card>
+                        </div>
+                        <div className="card">
+                            <h3 className="card-title">Our Mission</h3>
+                            <p className="card-content">Our mission is to make quality education accessible to everyone. We strive to create a supportive and engaging learning environment that fosters creativity, critical thinking, and practical skills.</p>
+                        </div>
+                        <div className="card">
+                            <h3 className="card-title">Our Team</h3>
+                            <p className="card-content"> <b>SIIT</b> is led by <b>Suryadeep Yadav, Ankit Yadav & Shivam Kashyap</b>, an experienced instructor with over 5 years of teaching experience in various computer courses. With a passion for education and a strong background in the field, <b>Suryadeep</b> is dedicated to providing high-quality learning experiences to students.</p>
+                        </div>
+                        <div className="card contact-info">
+                            <h3 className="card-title">Contact Us</h3>
+                            <p className="card-content">If you have any questions or inquiries, please feel free to reach out to us. We are here to assist you in your learning journey.</p>
+                            <p><b>Email:</b> <a href="mailto:suryayadav1012002@gmail.com">suryayadav1012002@gmail.com</a></p>
+                            <p><b>Phone:</b> 7084516342</p>
+                            <p><b>Email:</b> <a href="mailto:shivam.r.vatham@gmail.com">shivam.r.vatham@gmail.com</a></p>
+                            <p><b>Phone:</b> 9408954477</p>
+                            <p><b>Email:</b> <a href="mailto:ankityadav1022@gmail.com">ankityadav1022@gmail.com</a></p>
+                            <p><b>Phone:</b> 7844915732</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
-        </div>
         </Navbar>
     );
 }
