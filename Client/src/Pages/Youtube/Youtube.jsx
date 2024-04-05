@@ -51,7 +51,7 @@ const Youtube = () => {
                 style={{
                   marginTop: "2px",
                   padding: "4px",
-                  border: "2px solid blue",
+                  border: "2px solid skyblue",
                   borderRadius: "4px",
                 }}
                 onClick={() => handlePlaylistClick(playlist.playlistId)}
