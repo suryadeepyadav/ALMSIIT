@@ -42,7 +42,7 @@ const Youtube = () => {
           {playlist.map((playlist) => (
             <Card
               key={playlist.playlistId}
-              style={{ width: 230,border:'2px solid blue', marginLeft: 10,marginTop:4 }}
+              style={{ width: 230,border:'2px solid skyblue', marginLeft: 10,marginTop:4 }}
               cover={<img src={playlist.thumbnail} alt={playlist.title} />}
             >
               {/* <Meta title={video.title} /> */}
