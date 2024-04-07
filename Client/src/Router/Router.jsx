@@ -10,6 +10,7 @@ import About from "../Pages/Youtube/About";
 import Tutor from "../Pages/Tutor/Tutor";
 import Student from "../Pages/Student/Student";
 import Quizzes from "../Pages/Quizzes/Quizzes";
+import StartQuizes from "../Pages/Quizzes/StartQuizzes";
 import Content from "../Pages/Contents/Content";
 import SingleContent from "../Pages/SingleContent/SingleContent";
 import Doubts from "../Pages/Doubts/Doubts";
@@ -27,6 +28,7 @@ const Router = () => {
         <Route path="/tutor" element={<Tutor />} />
         <Route path="/student" element={<Student />} />
         <Route path="/quizzes" element={<Quizzes />} />
+        <Route path="/startquizzes/:id" element={<StartQuizes />} />
         <Route path="/leaderboard" element={<LeaderBoard />} />
         <Route path="/content/:id" element={<SingleContent />} />
         <Route path="/contents" element={<Content />} />
