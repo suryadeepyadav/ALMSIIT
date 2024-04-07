@@ -43,6 +43,25 @@ export const getQuizData = () => async (dispatch) => {
   }
 };
 
+//get single quizzes data
+export const getSingleQuizzesData = (quizzesId) => async (dispatch) => {
+  try {
+    dispatch({ type: types.GET_SINGLE_QUIZ_REQUEST });
+    const res = await axios.get(`${url}/quiz/${quizzesId}`);
+    dispatch({
+      type: types.GET_SINGLE_QUIZ_SUCCESS,
+      payload: { content: res.data.quiz },
+    });
+  } catch (error) {
+    dispatch({
+      type: types.GET_SINGLE_QUIZ_ERROR,
+      payload: {
+        message: "error",
+      },
+    });
+  }
+};
+
 //delete quiz
 export const deleteQuiz = (quizId) => async (dispatch) => {
   try {

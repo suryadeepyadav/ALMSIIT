@@ -1,11 +1,12 @@
 // import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteQuiz } from "../../Redux/quiz/action";
+import {useNavigate } from "react-router-dom";
 import "./Quiz.css";
 
 const Quiz = ({ data }) => {
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   const {
     user: { userType },
   } = useSelector((store) => store.auth.data);
@@ -14,13 +15,13 @@ const Quiz = ({ data }) => {
     dispatch(deleteQuiz(id));
   };
   const handleStartQuiz = (id) => {
-    // dispatch(deleteQuiz(id));
     console.log(id)
+    return navigate(`/startquizzes/${id}`);
   };
   return (
     <div className="quizDiv">
       <div>
-        <img src={data.thumbnail} alt="thumbnail" />
+        <img src="https://akm-img-a-in.tosshub.com/aajtak/2023-02/quiz_01.png" alt="thumbnail" />
       </div>
       <div>
         <div>
@@ -40,7 +41,7 @@ const Quiz = ({ data }) => {
               Delete Quiz
             </button>
           ) : (
-            <button className="startQuiz" onClick={handleStartQuiz(data.id)}>Start Quiz</button>
+            <button className="startQuiz" onClick={()=>handleStartQuiz(data._id)}>Start Quiz</button>
           )}
         </div>
       </div>

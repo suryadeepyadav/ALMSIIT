@@ -41,6 +41,25 @@ export default function quizReducer(state = initialState, { type, payload }) {
         load: false,
         error: true,
       };
+
+      case types.GET_SINGLE_QUIZ_REQUEST:
+        return {
+          ...state,
+          load: true,
+          error: false,
+        };
+      case types.GET_SINGLE_QUIZ_SUCCESS:
+        return {
+          ...state,
+          singleQUIZ: payload.QUIZ,
+          load: false,
+        };
+      case types.GET_SINGLE_QUIZ_ERROR:
+        return {
+          ...state,
+          load: false,
+          error: true,
+        };
     case types.DELETE_QUIZ_REQUEST:
       return {
         ...state,
