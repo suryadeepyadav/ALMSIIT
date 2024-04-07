@@ -17,6 +17,17 @@ router.get("/all", async (req, res) => {
   }
 });
 
+//get single data route
+router.get("/:quizId", async (req, res) => {
+  const { quizId } = req.params;
+  try {
+    const quiz = await QuizModel.find({ _id: quizId });
+    res.send({ msg: "Single quiz data", quiz: quiz[0] });
+  } catch (error) {
+    res.status(400).send({ msg: "Something went wrong" });
+  }
+});
+
 //create new quiz
 router.post("/create", isAuthenticated, async (req, res) => {
   try {
