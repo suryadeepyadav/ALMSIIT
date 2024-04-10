@@ -102,7 +102,7 @@ const Content = () => {
         cloudName: "diverse",
         uploadPreset: "diverse",
         maxFiles: 1,
-        clientAllowedFormats: ["jpg", "jpeg", "mp4"],
+        clientAllowedFormats: ["jpg", "jpeg", "mp4","pdf"],
         maxFileSize: 52445000,
         thumbnailTransformation: [{ width: 240, height: 135, crop: "fill" }],
       },
