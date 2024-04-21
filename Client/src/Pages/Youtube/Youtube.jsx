@@ -53,6 +53,8 @@ const Youtube = () => {
                   padding: "4px",
                   border: "2px solid blue",
                   borderRadius: "4px",
+                  backgroundColor:"azure"
+                  
                 }}
                 onClick={() => handlePlaylistClick(playlist.playlistId)}
               >
