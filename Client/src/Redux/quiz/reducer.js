@@ -3,6 +3,7 @@ const initialState = {
   load: false,
   error: false,
   quiz: [],
+  singleQuiz:{},
 };
 export default function quizReducer(state = initialState, { type, payload }) {
   switch (type) {
@@ -51,7 +52,7 @@ export default function quizReducer(state = initialState, { type, payload }) {
       case types.GET_SINGLE_QUIZ_SUCCESS:
         return {
           ...state,
-          singleQUIZ: payload.QUIZ,
+          singleQuiz: payload.quiz,
           load: false,
         };
       case types.GET_SINGLE_QUIZ_ERROR:

@@ -53,7 +53,9 @@ const SingleContent = () => {
             {singleContent?.fileType == "jpg" ||
             singleContent?.fileType == "jpeg" ? (
               <img src={singleContent.fileUrl} alt="" />
-            ) : (
+            ): singleContent?.fileType === "pdf" ? (
+              <embed src={singleContent.fileUrl} type="application/pdf" width="100%" />
+            )  : (
               <video
                 allow="fullscreen"
                 frameBorder="0"

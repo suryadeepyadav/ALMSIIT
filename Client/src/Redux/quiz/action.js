@@ -50,7 +50,7 @@ export const getSingleQuizzesData = (quizzesId) => async (dispatch) => {
     const res = await axios.get(`${url}/quiz/${quizzesId}`);
     dispatch({
       type: types.GET_SINGLE_QUIZ_SUCCESS,
-      payload: { content: res.data.quiz },
+      payload: { quiz: res.data.quiz },
     });
   } catch (error) {
     dispatch({
