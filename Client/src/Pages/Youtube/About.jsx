@@ -4,6 +4,9 @@ import './About.css'; // Assuming this CSS file is in the same directory as your
 import webdesigning from './images/webdesigning.png.png'; // Importing the image for Web Designing
 import imglang from './images/imglang.png'; // Importing the image for C Programming
 import { Card } from "antd";
+import { CgMail } from "react-icons/cg";
+import { MdPhone } from "react-icons/md";
+
 
 const About = () => {
     return (
@@ -17,7 +20,7 @@ const About = () => {
                         </div>
                         <div className="card-container">
 
-                            <Card className="card">
+                            <Card className="card" hoverable>
                                 <h3 className="card-title">Our Courses</h3>
 
                                 <img src={webdesigning} alt="Web Designing" className="programmingimage" />
@@ -48,7 +51,7 @@ const About = () => {
                                 </div>
                             </Card>
 
-                            <Card className="card">
+                            <Card className="card" hoverable>
                                 <h3 className="card-title">Speciality In</h3>
                                 <img src={imglang} alt="C Programming" className="imglang" />
                             </Card>
@@ -64,12 +67,12 @@ const About = () => {
                         <div className="card contact-info">
                             <h3 className="card-title">Contact Us</h3>
                             <p className="card-content">If you have any questions or inquiries, please feel free to reach out to us. We are here to assist you in your learning journey.</p>
-                            <p><b>Email:</b> <a href="mailto:suryayadav1012002@gmail.com">suryayadav1012002@gmail.com</a></p>
-                            <p><b>Phone:</b> 7084516342</p>
-                            <p><b>Email:</b> <a href="mailto:shivam.r.vatham@gmail.com">shivam.r.vatham@gmail.com</a></p>
-                            <p><b>Phone:</b> 9408954477</p>
-                            <p><b>Email:</b> <a href="mailto:ankityadav1022@gmail.com">ankityadav1022@gmail.com</a></p>
-                            <p><b>Phone:</b> 7844915732</p>
+                            <p><CgMail ></CgMail>  <a href="mailto:suryayadav1012002@gmail.com">suryayadav1012002@gmail.com</a></p>
+                            <p><MdPhone />  7084516342</p>
+                            <p><CgMail ></CgMail>  <a href="mailto:shivam.r.vatham@gmail.com">shivam.r.vatham@gmail.com</a></p>
+                            <p><MdPhone />  9408954477</p>
+                            <p><CgMail ></CgMail>   <a href="mailto:ankityadav1022@gmail.com">ankityadav1022@gmail.com</a></p>
+                            <p><MdPhone />  7844915732</p>
                         </div>
 
                     </div>
