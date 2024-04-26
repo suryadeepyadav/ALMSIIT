@@ -38,11 +38,12 @@ const Youtube = () => {
       <Navbar>
         <Header Title={"Youtube"} Address={"Youtube"} />
         <h1 style={{marginLeft:10,textAlign:'center'}}>Playlist</h1>
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", }}>
           {playlist.map((playlist) => (
             <Card
+            hoverable={true}
               key={playlist.playlistId}
-              style={{ width: 230,border:'2px solid blue', marginLeft: 10,marginTop:4 }}
+              style={{ width: 230,border:'2px solid blue', marginLeft: 25,marginTop:4,backgroundColor:"azure" }}
               cover={<img src={playlist.thumbnail} alt={playlist.title} />}
             >
               {/* <Meta title={video.title} /> */}
@@ -52,8 +53,11 @@ const Youtube = () => {
                   marginTop: "2px",
                   padding: "4px",
                   border: "2px solid blue",
+                  color:"white",
                   borderRadius: "4px",
-                  backgroundColor:"azure"
+                  backgroundColor:"rgb(38, 139, 233)",
+                  
+            
                   
                 }}
                 onClick={() => handlePlaylistClick(playlist.playlistId)}
