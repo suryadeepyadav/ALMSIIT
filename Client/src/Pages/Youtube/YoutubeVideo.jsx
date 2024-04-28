@@ -82,14 +82,19 @@ const YoutubeVideo = () => {
           <div
             style={{
               display: "flex",
-              width: "70%",
+              width: "60%",
+              margin:10,
+              marginTop:"10px",
+              marginLeft:"10px",
+              padding:10,
+              height:"60%"
             }}
           >
             {video.map((video) => (
               <div
                 key={video.videoId}
                 className="content"
-                style={{ paddingTop: "2px" }}
+                style={{ height:"400px",padding:10, marginLeft:20, textAlign:"center",paddingTop:20}}
                 dangerouslySetInnerHTML={{ __html: video.embedVideo }}
               ></div>
             ))}
@@ -101,9 +106,13 @@ const YoutubeVideo = () => {
                   style={{
                     marginTop: "8px",
                     padding: "4px",
+                    marginRight:"10px",
                     border: "2px solid blue",
                     borderRadius: "4px",
                     cursor: "pointer",
+                    backgroundColor:"azure",
+                    textAlign:"center",
+                
                   }}
                   onClick={() => handleVideoClick(playlistitem.videoid1)}
                 >
